@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -28,6 +29,7 @@ namespace Calcul
             int x = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите третье число для нахождения среднего");
             int v = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Среднее число от чисел {z}, {x}, {v} равняется: {Average(z, x, v)}");
             Console.ReadKey();
         }
         public static string Calcul(int a, int b, int c)
@@ -83,6 +85,11 @@ namespace Calcul
             }
 
             return factorial;
+        }
+        public static int Average(int z, int x, int v)
+        {
+            int average = (z + x + v) / 3;
+            return average;
         }
     }
 }
